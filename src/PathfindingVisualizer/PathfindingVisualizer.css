@@ -1,0 +1,19 @@
+.grid {
+  margin: 5px 0 0;
+}
+button {
+  font-weight: 300;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #333;
+  color: #8ad1f1;
+  font-size: 18px;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+
+  /* Hover effect */
+  &:hover {
+    background-color: #ffa600; /* Darker background on hover */
+    color: #333; /* Lighter text on hover */
+  }
+}
