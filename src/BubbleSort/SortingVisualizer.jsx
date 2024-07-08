@@ -6,7 +6,7 @@ const SortingVisualizer = () => {
   const [array, setArray] = useState([]);
   const [moves, setMoves] = useState([]);
   const containerRef = useRef(null);
-  const audioCtxRef = useRef(null);
+ // const audioCtxRef = useRef(null);
 
   useEffect(() => {
     for (let i = 0; i < 10; i++) {
@@ -30,24 +30,24 @@ const SortingVisualizer = () => {
     animate(newMoves);
   };
 
-  const playNote = (freq) => {
-    if (!audioCtxRef.current) {
-      audioCtxRef.current = new (window.AudioContext ||
-        window.webkitAudioContext)();
-    }
+  // const playNote = (freq) => {
+  //   if (!audioCtxRef.current) {
+  //     audioCtxRef.current = new (window.AudioContext ||
+  //       window.webkitAudioContext)();
+  //   }
 
-    if (!isFinite(freq)) {
-      console.error("Invalid frequency:", freq);
-      return;
-    }
+  //   if (!isFinite(freq)) {
+  //     console.error("Invalid frequency:", freq);
+  //     return;
+  //   }
 
-    const dur = 0.1;
-    const osc = audioCtxRef.current.createOscillator();
-    osc.frequency.value = freq;
-    osc.start();
-    osc.stop(audioCtxRef.current.currentTime + dur);
-    osc.connect(audioCtxRef.current.destination);
-  };
+  //   const dur = 0.1;
+  //   const osc = audioCtxRef.current.createOscillator();
+  //   osc.frequency.value = freq;
+  //   osc.start();
+  //   osc.stop(audioCtxRef.current.currentTime + dur);
+  //   osc.connect(audioCtxRef.current.destination);
+  // };
 
   const animate = (remainingMoves) => {
     if (remainingMoves.length === 0) {
@@ -62,12 +62,12 @@ const SortingVisualizer = () => {
       [array[i], array[j]] = [array[j], array[i]];
     }
 
-    playNote(200 + array[i] * 500);
-    playNote(200 + array[j] * 500);
+    // playNote(200 + array[i] * 500);
+    // playNote(200 + array[j] * 500);
 
     showBar(move); // Pass move to showBar if needed
 
-    setTimeout(() => animate(remainingMoves), 50);
+    setTimeout(() => animate(remainingMoves), 100);
   };
 
   const sortingAlgo = (array) => {
