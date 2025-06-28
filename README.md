@@ -13,7 +13,7 @@ AlgoVisualiser is a dynamic and educational web application that brings sorting 
 ## 🛠 Tech Stack
 
 - **Frontend**: React.js  
-- **Visualization**: HTML5 Canvas & DOM animation  
+- **Visualization**: HTML5  & DOM animation  
 - **Styling**: CSS3, Responsive Design  
 - **Deployment**: Hosted on Render
 
