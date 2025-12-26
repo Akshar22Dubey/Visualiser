@@ -4,12 +4,6 @@ AlgoVisualiser is a dynamic and educational web application that brings sorting 
 
 ---
 
-## 🌐 Live Demo
-
-🔗 https://kraftysoul-ai.onrender.com/
-
----
-
 ## 🛠 Tech Stack
 
 - **Frontend**: React.js  
